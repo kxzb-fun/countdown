@@ -10,7 +10,12 @@ const EventList = () => {
     useEffect(() => {
         const loadEvents = async () => {
             const events = await fetchEvent();
-            setEvents(events);
+            if (!events) {
+                setEvents([]);
+            } else {
+                setEvents(events);
+            }
+
         };
         loadEvents();
     }, []);
