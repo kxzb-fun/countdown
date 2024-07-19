@@ -5,4 +5,5 @@ module.exports = {
     "^.+\\.jsx?$": "babel-jest",
   },
   moduleFileExtensions: ["js", "jsx"],
+  coverageDirectory: "coverage", // 覆盖率报告的输出目录
 };
